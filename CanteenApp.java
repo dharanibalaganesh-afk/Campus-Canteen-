@@ -7,6 +7,7 @@ import java.util.ArrayList;
         menu.add(new MenuItem("Masala Dosa", 40));
         menu.add(new MenuItem("Idli", 20));
         menu.add(new MenuItem("Filter Coffee", 15));
+        menu.add(new MenuItem("Chappathi", 60);
 
        
         OrderView view = new OrderView();
