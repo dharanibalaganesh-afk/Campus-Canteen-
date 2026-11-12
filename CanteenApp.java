@@ -35,6 +35,6 @@ public class CanteenApp{
                 
             }
         }
-        System.out.println("Thank you! Visit again.");
+        System.out.println("\nThank you! Visit again.");
     }
 }

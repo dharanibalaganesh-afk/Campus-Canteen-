@@ -19,8 +19,8 @@ public class OrderView {
         System.out.println("\n----- RECEIPT -----");
         for (Order order : orders) {
             System.out.println(order.getItem().getName() + " x " + order.getQuantity()
-                    + " = Rs." + (int) order.getTotal());
+                    + " = Rs." + ((int) order.getTotal()));
         }
-        orders.clear(); // start fresh for the next customer
+        
     }
 }

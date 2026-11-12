@@ -29,8 +29,7 @@ public class OrderController {
     public void takeOrder(int choice) {
         System.out.print("Enter quantity: ");
         int quantity = scanner.nextInt();
-        MenuItem picked = menu.get(choice);
-        ArrayList<Order> orders = new ArrayList<Order>();
+        MenuItem picked = menu.get(choice -1);
         orders.add(new Order(picked, quantity));
         System.out.println("Added: " + picked.getName() + " x " + quantity);
     }
@@ -38,13 +37,13 @@ public class OrderController {
     public double getGrandTotal() {
         double total = 0;
         for (Order order : orders) {
-            total += order.getTotal();
+            total += order.getTotal() * order.getQuantity();
         }
         return total;
     }
 
     public void printReceipt() {
         view.printReceipt(orders);
-        System.out.println("Grand Total: Rs." + (int) getGrandTotal());
+        System.out.println("\nGrand Total: Rs." + (int) getGrandTotal());
     }
 }
