@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-
+public  class CanteenApp{
     public static void main(String[] args) {
      
         ArrayList<MenuItem> menu = new ArrayList<MenuItem>();
@@ -12,10 +12,9 @@ import java.util.ArrayList;
         menu.add(new MenuItem("Tea",15));
         menu.add(new MenuItem("Sandwich",35));
 
-
-        OrderView view = new OrderView();
        
-        OrderController controller = new OrderController(menu,view);
+        OrderView view = new OrderView();
+        OrderController controller = new OrderController( menu ,view);
 
         System.out.println("Welcome to Campus Canteen!");
 
@@ -27,11 +26,11 @@ import java.util.ArrayList;
                 controller.printReceipt();
                 running = false;
             } else {
-                controller.takeOrder(choice);
+                controller.takeOrder(choice -1);
             }
         }
-
-        System.out.println("Thank you! Visit again✨.");
-        System.out.println("We hope you enjoyed the food");
+        System.out.println("VAzhga VAlamudun , kanedkjbwjb:.");
     }
 
+
+}
